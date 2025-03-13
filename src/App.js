@@ -1,15 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Link} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Titulo de prueba para inicio de proyecto</h2>
-        <p>Aqui vamos a comenzar con nuestro nuevo proyecto</p>
-      </header>
-    </div>
+    <Router>
+      <h2>Titulo de prueba</h2>
+      <div className='App'>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/' element={<Home />} className='list'>
+              Home
+              </Link> </li>
+
+              <li>
+              <Link to='Registro' element={<Registro />} className='list'>
+              Home
+              </Link> </li>
+
+              <li>
+              <Link to='Loguearse' element={<Loguearse />} className='list'>
+              Home
+              </Link> </li>
+          </ul>
+        </nav>
+      </div>
+      <Rutas />
+      <Footer />
+    </Router>
   );
 }
 
