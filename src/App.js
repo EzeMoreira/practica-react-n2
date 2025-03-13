@@ -1,5 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Link} from "react-router-dom";
+import Registro from './paginas/Registro';
+import Home from './paginas/Home';
+import Loguearse from './paginas/Loguearse';
+import Rutas from './componentes/Rutas';
+import Footer from './componentes/Footer';
 
 
 function App() {
