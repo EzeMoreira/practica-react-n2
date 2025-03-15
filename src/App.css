@@ -50,3 +50,11 @@ img{
   padding: 0;
   width: 100%;
 }
+
+.registro{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: 2px solid rgb(65, 65, 65);
+}
