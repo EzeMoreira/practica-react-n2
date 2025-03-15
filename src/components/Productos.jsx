@@ -40,15 +40,6 @@ function Producto() {
     }   else {
         return(
             <>
-            <div id="buscador">
-                <input type="text"
-                name="buscar"
-                value={buscar}
-                onChange={handleChange}
-                placeholder="buscar"
-                /> <br />
-            </div>
-
             {productos.slice(0, 8).map((producto) =>
             <Producto 
             id={producto.id}
