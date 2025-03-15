@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllProductos } from "../servicios/ProductoServicio";
-import Productos from "./Productos";
+import Producto from "./Productos";
 
-function Producto() {
+function Productos() {
 
     const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState();
@@ -40,15 +40,16 @@ function Producto() {
     }   else {
         return(
             <>
-            {productos.slice(0, 8).map((producto) =>
-            <Producto 
-            id={producto.id}
-            imagen={producto.thumbnail}
-            nommbre={producto.title}
-            precio={producto.price}
-            />
-            )}
-            <br />
+            {(productos || []).slice(0, 8).map(producto => 
+    <Producto
+        key={producto.id} // Agregar una key para evitar warnings
+        id={producto.id}
+        imagen={producto.thumbnail}
+        nombre={producto.title}
+        precio={producto.price}
+    />
+)}
+            
             </>
         );
     }
