@@ -43,3 +43,10 @@ Nav ul{
   font-weight: 500;
   color: chocolate;
 }
+
+img{
+  background: #000 url(elije-tu-lenguaje.png) no-repeat center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
