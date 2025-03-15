@@ -4,6 +4,7 @@ import Registro from './paginas/Registro';
 import Home from './paginas/Home';
 import Loguearse from './paginas/Loguearse';
 import Rutas from './componentes/Rutas';
+import logo from './img/elije-tu-lenguaje.png'
 import Footer from './componentes/Footer';
 
 
@@ -30,6 +31,7 @@ function App() {
               </Link> </li>
           </ul>
         </nav>
+        <img src={logo} className='AppLogo' alt='banner' />
       </div>
       <Rutas />
       <Footer />

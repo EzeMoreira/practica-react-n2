@@ -2,7 +2,11 @@ Este proyecto es unicamente para practicar con react, a medida que va creciendo 
 repositorio de github.
 
 1º creacion de proyecto, npx create-react-app@latest mi-aplicacion
-2º Creacion de template del proyecto
+
+2º Instalar react router dom, npm install react-router-dom
+
+3º Creacion de template del proyecto
+
 
 #282C34 azul oscuro
 #61DAFB celeste claro
