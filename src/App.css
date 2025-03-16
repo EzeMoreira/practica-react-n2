@@ -44,6 +44,15 @@ Nav ul{
   color: chocolate;
 }
 
+.list{
+  color: chocolate;
+  text-decoration: none;
+  margin: 15px;
+  padding: 15px;
+  font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 img{
   background: #000 url(./img/elije-tu-lenguaje.png) no-repeat center;
   margin: 0;
