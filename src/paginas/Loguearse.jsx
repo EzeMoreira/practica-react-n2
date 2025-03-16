@@ -9,11 +9,11 @@ function Loguearse() {
                 <label>
                     Email:
                 </label> <br />
-                <input type="email" name="email" required placeholder="email"/> <br />
+                <input type="email" name="email" required placeholder="Email"/> <br />
                 <label>
                     Password:
                 </label> <br />
-                <input type="password" name="password" placeholder="password" required/>
+                <input type="password" name="password" placeholder="Password" required/>
                 <br />
                 <button type="submit" id="botonComprar">Enviar</button> <br />
             </form>

@@ -14,11 +14,11 @@ function Registro() {
                 <label>
                     Email:
                 </label> <br />
-                <input type="email" name="email" placeholder="email" required /> <br/>
+                <input type="email" name="email" placeholder="Email" required /> <br/>
                 <label>
                     Password:
                 </label> <br />
-                <input type="password" name="password" placeholder="password" required />
+                <input type="password" name="password" placeholder="Password" required />
                 <br/>
                 <button type="submit" value="submit" id="botonComprar">Enviar</button> <br />
             </form>
