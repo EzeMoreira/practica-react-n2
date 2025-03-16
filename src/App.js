@@ -22,12 +22,12 @@ function App() {
 
               <li>
               <Link to='Registro' element={<Registro />} className='list'>
-              Home
+              Registro
               </Link> </li>
 
               <li>
               <Link to='Loguearse' element={<Loguearse />} className='list'>
-              Home
+              Loguearse
               </Link> </li>
           </ul>
         </nav>
