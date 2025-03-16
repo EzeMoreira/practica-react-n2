@@ -14,7 +14,7 @@ function Loguearse() {
                     Password:
                 </label> <br />
                 <input type="password" name="password" placeholder="Password" required/>
-                <br />
+                <br /> <br />
                 <button type="submit" id="botonComprar">Enviar</button> <br />
             </form>
         </div>
