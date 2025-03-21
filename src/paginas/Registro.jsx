@@ -15,7 +15,7 @@ function Registro() {
     }
 
     return(
-        <>
+        <div>
         <h2>Registrate para +</h2>
         <form onSubmit={handlesubmit(onSubmit)}>
 
@@ -40,24 +40,46 @@ function Registro() {
                 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i,
             })} />
             <br />
-        </form>
-        <div className="registro">
-            <form action="#" method="GET">
-                 
-                <input type="text" name="name" placeholder="Nombre" required /> <br/>
-                <label>
-                    Email:
-                </label> <br />
-                <input type="email" name="email" placeholder="Email" required /> <br/>
-                <label>
-                    Password:
-                </label> <br />
-                <input type="password" name="password" placeholder="Password" required />
-                <br/> <br/>
-                <button type="submit" value="submit" id="botonComprar">Enviar</button> <br />
+
+            {errors.email && (
+                <>
+                {errors.email?.type === "required" && (
+                    <span>El campo es obligatorio</span>
+                )}
+                {errors.email?.type === "pattern" && (
+                    <span>Formato de email no valido</span>
+                )}
+                </>
+            )}
+            <br />
+            <label>Contraseña</label> <br/>
+            <input 
+                type="password"
+                {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 12,
+                })} required
+                /> <br />
+
+                {errors.password && (
+                    <>
+                    {errors.password?.type === "required" && (
+                        <span>El campo es obligatorio</span>
+                    )}
+                    {errors.password?.type === "mingLength" && (
+                        <span>Debe contener al menos 6 caracteres</span>
+                    )}
+                    {errors.password?.type === "maxLength" && (
+                        <span>Debe contener como maximo 12 caracteres</span>
+                    )}
+                    </>
+                )} <br/>
+
+                <button type="submit" id="botonComprar">Registrarse</button>
+
             </form>
         </div>
-        </>
     );
 }
 
