@@ -17,11 +17,33 @@ function Registro() {
     return(
         <>
         <h2>Registrate para +</h2>
+        <form onSubmit={handlesubmit(onSubmit)}>
+
+        <label>Nombre:</label><br />
+        <input type="text" {...register("nombre", { required: true})} />
+        {errors.nombre && (
+
+            <span>El campo es obligatorio</span>
+        )} <br />
+
+        <label>Apellido</label> <br />
+        <input type="text" {...register("apellido")} />
+
+        <br />
+
+        <label>Email</label>
+        <input 
+            type="text"
+            {...register("email", {
+                required: true,
+                pattern:
+                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i,
+            })} />
+            <br />
+        </form>
         <div className="registro">
             <form action="#" method="GET">
-                <label>
-                    Nombre:
-                </label> <br />
+                 
                 <input type="text" name="name" placeholder="Nombre" required /> <br/>
                 <label>
                     Email:
