@@ -1,6 +1,18 @@
 import React from "react";
+import { useForm } from "react-hook-form"
+import { create } from "../servicios/usuariosService";
 
 function Registro() {
+
+    const {
+        register,
+        handlesubmit,
+        formState: { errors },
+    } = useForm({ mode: "onChange" });
+
+    const onSubmit = (data) => {
+        console.log(data);
+    }
 
     return(
         <>
