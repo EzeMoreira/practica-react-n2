@@ -1,7 +1,7 @@
 import React from "react";
 import Productos from "../components/Productos";
 import logo from '../img/elije-tu-lenguaje.png';
-import firebase from '../Config/Firebase';
+import firebase from '../Config/firebase';
 
 function Home(){
     console.log("Esto es firebase: ", firebase);

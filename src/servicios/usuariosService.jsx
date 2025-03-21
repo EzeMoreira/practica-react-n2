@@ -1,4 +1,4 @@
-import firebase from "../Config/Firebase";
+import firebase from "../Config/firebase";
 
 export async function create(payload){
     const responseUser = await firebase.auth().createUserWithEmailAndPassword(payload.email)
