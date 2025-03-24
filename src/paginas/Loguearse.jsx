@@ -13,26 +13,26 @@ function Loguearse() {
     } = useForm({ mode: "onChange" });
 
     const onSubmit = async (data) => {
-        setLoading(true);
+        //setLoading(true);
         try {
             const user = await login(data.email, data.password);
             alert("Logueado con exito")
             console.log("Se logueo el user: ", user);
-            context.loginUser();
-            setLoading(false);
-            setAlert({
+            //context.loginUser();
+            //setLoading(false);
+            /* setAlert({
                 variant: "success",
                 text: "Ingreso exitoso",
                 duration: 3000,
                 link: "/",
-            });
+            }); */
         }   catch (e) {
             console.log(e.code);
-            setAlert({
+            /*setAlert({
                 variant: "danger",
                 text: registroMessage[e.code] || "Ha ocurrido un error",
-            });
-            setLoading(false);
+            }); */
+            //setLoading(false);
         }
     };
 
@@ -41,7 +41,7 @@ function Loguearse() {
             <h2>Accede</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>Usuario</label> <br/>
-                <input type="email" {...register("email", { required:true})} /> <br/>
+                <input type="email" {...register("email ", { required:true})} /> <br/>
                 <label>Contraseña</label> <br/>
                 <input 
                     type="password"
