@@ -15,6 +15,7 @@ function Registro() {
 
         try{
             const user = await create(data);
+            alert("Usuario creado ", user)
             console.log("Este es el user creado: ", user);
             setAlert({
                 variant: "success",
