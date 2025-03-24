@@ -18,7 +18,32 @@ function Loguearse() {
     return(
         <div className="registro">
             <h2>Accede</h2>
-            
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <label>Usuario</label> <br/>
+                <input type="text" {...register("usario", { required:true})} /> <br/>
+                <label>Contraseña</label> <br/>
+                <input 
+                    type="password"
+                    {...register("password", {
+                        required: true,
+                        minLenght: 6,
+                        maxLenght: 12,
+                    })} required /> <br/>
+                    {errors.password && (
+                        <>
+                            {errors.password?.tpye === "required" &&(
+                                <span>El campo es obligatorio</span>
+                            )}
+                            {errors.password?.type === "minLenght" && (
+                                <span>Debe contener al menos 6 caracteres</span>
+                            )}
+                            {errors.password?.type === "maxLenght" && (
+                                <span>Debe contener al menos 12 caracteres</span>
+                            )}
+                        </>
+                    )}  <br/>
+                    <button type="submit" id="botonComprar">Enviar</button>
+            </form>
         </div>
     );
 }
