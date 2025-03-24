@@ -5,6 +5,12 @@ import { login } from '../servicios/usuariosService';
 
 function Loguearse() {
 
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({ mode: "onChange" });
+
     return(
         <div className="registro">
             <h2>Accede</h2>
