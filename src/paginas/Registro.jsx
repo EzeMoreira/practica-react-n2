@@ -7,7 +7,7 @@ function Registro() {
 
     const {
         register,
-        handlesubmit,
+        handleSubmit,
         formState: { errors },
     } = useForm({ mode: "onChange" });
 
@@ -35,7 +35,7 @@ function Registro() {
     return(
         <div>
         <h2>Registrate para +</h2>
-        <form onSubmit={handlesubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
 
         <label>Nombre:</label><br />
         <input type="text" {...register("nombre", { required: true})} />
