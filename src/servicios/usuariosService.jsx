@@ -5,7 +5,7 @@ export async function create(payload){
     console.log("Create ID del usuario:", responseUser.user.uid)
     const document = await firebase.firestore().collection("usuarios")
     .add({
-        name:puyload.nombre,
+        name:payload.nombre,
         lastname:payload.apellido,
         userId:responseUser.user.uid
     })
