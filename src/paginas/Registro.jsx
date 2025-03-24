@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form"
 import { create } from "../servicios/usuariosService";
+import { data } from "react-router-dom";
 
 function Registro() {
 
@@ -10,9 +11,25 @@ function Registro() {
         formState: { errors },
     } = useForm({ mode: "onChange" });
 
-    const onSubmit = (data) => {
-        console.log(data);
-    }
+    const onSubmit = async (data) => {
+
+        try{
+            const user = await create(data);
+            console.log("Este es el user creado: ", user);
+            setAlert({
+                variant: "success",
+                text: "Gracias por registrarte",
+                duration: 3000,
+                link: "/ingresar"
+            });
+        }   catch (e) {
+            console.log(e.code);
+            setAlert({
+                variant: "danger",
+                text: registroMessage[e.code] || "Ha ocurrido un error",
+            });
+        }
+    };
 
     return(
         <div>
