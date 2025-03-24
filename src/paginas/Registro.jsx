@@ -17,18 +17,18 @@ function Registro() {
             const user = await create(data);
             alert("Usuario creado ", user)
             console.log("Este es el user creado: ", user);
-            setAlert({
+            /*setAlert({
                 variant: "success",
                 text: "Gracias por registrarte",
                 duration: 3000,
                 link: "/ingresar"
-            });
+            }); */
         }   catch (e) {
             console.log(e.code);
-            setAlert({
+            /* setAlert({
                 variant: "danger",
                 text: registroMessage[e.code] || "Ha ocurrido un error",
-            });
+            }); */
         }
     };
 
