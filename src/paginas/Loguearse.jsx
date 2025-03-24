@@ -11,6 +11,10 @@ function Loguearse() {
         formState: { errors },
     } = useForm({ mode: "onChange" });
 
+    const onSubmit = (data) => {
+        console.log(data);
+    }
+
     return(
         <div className="registro">
             <h2>Accede</h2>
