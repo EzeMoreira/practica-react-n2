@@ -41,7 +41,7 @@ function Loguearse() {
             <h2>Accede</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>Usuario</label> <br/>
-                <input type="text" {...register("usario", { required:true})} /> <br/>
+                <input type="email" {...register("email", { required:true})} /> <br/>
                 <label>Contraseña</label> <br/>
                 <input 
                     type="password"
