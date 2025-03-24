@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { login } from '../servicios/usuariosService';
+import { data } from "react-router-dom";
 
 function Loguearse() {
 
@@ -11,9 +12,28 @@ function Loguearse() {
         formState: { errors },
     } = useForm({ mode: "onChange" });
 
-    const onSubmit = (data) => {
-        console.log(data);
-    }
+    const onSubmit = async (data) => {
+        setLoading(true);
+        try {
+            const user = await login(data.email, data.password);
+            console.log("Se logueo el user: ", user);
+            context.loginUser();
+            setLoading(false);
+            setAlert({
+                variant: "success",
+                text: "Ingreso exitoso",
+                duration: 3000,
+                link: "/",
+            });
+        }   catch (e) {
+            console.log(e.code);
+            setAlert({
+                variant: "danger",
+                text: registroMessage[e.code] || "Ha ocurrido un error",
+            });
+            setLoading(false);
+        }
+    };
 
     return(
         <div className="registro">
