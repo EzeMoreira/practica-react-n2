@@ -16,6 +16,7 @@ function Loguearse() {
         setLoading(true);
         try {
             const user = await login(data.email, data.password);
+            alert("Logueado con exito")
             console.log("Se logueo el user: ", user);
             context.loginUser();
             setLoading(false);
